@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    color: #4a4a4a;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 20px 50px;
+    background: linear-gradient(120deg, #d4fc79, #96e6a1);
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+#titulo1 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    color: #2e86de;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 1.8rem;
+    color: #27ae60;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#cajitatexto {
+    padding: 15px 30px;
+    background: #ffffff;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: justify;
+    color: #7f8c8d;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+#cajitaboton {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#Boton button {
+    background: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#Boton button:hover {
+    background: #1e8449;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#foto1{
+    float: inline-end;
+}
+#foto2{
+    float: inline-start;
+}

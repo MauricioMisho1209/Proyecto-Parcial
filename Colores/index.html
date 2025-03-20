@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style (1).css">
+    </head>
+    <body>
+        <div class="container">
+            
+        </div>
+
+        <script>
+            arreglo = ["#8e44ad", "#2980b9", "#2980b9", "#f1c40f"];
+            let contenedor = document.querySelector(".container");
+        
+            for (let i = 0; i < 100; i++) {
+                let cuadrado = document.createElement("div");
+                cuadrado.classList.add("square");
+                contenedor.appendChild(cuadrado);
+        
+                let colorOriginal = cuadrado.style.backgroundColor;
+                let isActive = false;
+        
+                cuadrado.addEventListener("mouseover", function () {
+                    if (isActive) return; 
+                    isActive = true;
+        
+                    let num = Math.floor(Math.random() * arreglo.length);
+                    cuadrado.style.background = arreglo[num];
+        
+                   
+                    setTimeout(() => {
+                        cuadrado.style.background = colorOriginal;
+                        isActive = false;
+                    }, 5000);
+                });
+            }
+        </script>
+        
+        
+    </body>
+</html>
