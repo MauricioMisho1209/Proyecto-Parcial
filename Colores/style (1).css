@@ -1,15 +1,22 @@
+/* Importa una fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 * {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background-color: #111;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
 }
 
 .container {
@@ -27,7 +34,7 @@ body {
   height: 50px;
   width: 16px;
   margin: 2px;
-  transition: 5s ease;
+  transition: 2.5s ease;
 }
 
 .square:hover {
@@ -49,7 +56,6 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Efecto hover */
 .RegesoMenu a:hover {
   background: #ff9b33;
   transform: scale(1.05);

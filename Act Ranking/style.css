@@ -1,28 +1,39 @@
+/* Importa una fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
-	background-color: rgb(127, 71, 147)
-  }
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
   .rating {
 	margin-top: 100px;
 	display: flex;
 	justify-content: center;
   }
-  .titulo h1{
-	display:FLEX;
-	justify-content:center;
-	align-items:center;
-	height: 100vh;
-  }
-
+ 
   .app{
-	border: 2px black solid;
-  }
-  .item {
-	width: 100px;
-	height: auto;
-	padding: 15px;
-
-  }
+    border: 2px black solid;
+    }
+    .item {
+    width: 100px;
+    height: auto;
+    padding: 15px;
   
+    }
+    
   .RegesoMenu a{
     display: block;
     width: 100%;

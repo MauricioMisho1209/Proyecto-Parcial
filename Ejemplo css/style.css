@@ -1,32 +1,35 @@
+/* Importa una fuente moderna */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
-    font-family: 'Poppins', sans-serif;
-    color: #4a4a4a;
-    font-size: 16px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    margin: 20px 50px;
-    background: linear-gradient(120deg, #d4fc79, #96e6a1);
-    color: #2c3e50;
-    line-height: 1.6;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
 }
 
 h1 {
     text-align: center;
     font-size: 2.5rem;
-    color: #34495e;
+    color: white;
     margin-bottom: 20px;
 }
 
 #titulo1 {
     font-size: 2rem;
     letter-spacing: 3px;
-    color: #2e86de;
+    color: white;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -35,7 +38,7 @@ h1 {
 
 .titulo {
     font-size: 1.8rem;
-    color: #27ae60;
+    color: white;
     font-weight: 500;
     margin-bottom: 10px;
 }
@@ -56,26 +59,28 @@ p {
     margin-bottom: 15px;
 }
 
-#cajitaboton {
-    margin-top: 20px;
-    text-align: center;
-}
-
-#Boton button {
-    background: #27ae60;
+input[type=submit] {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    text-decoration: none;
+    background: #ff7b00;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-#Boton button:hover {
-    background: #1e8449;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+input[type=submit]:hover {
+    background: #ff9b33;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
+
+
 #foto1{
     float: inline-end;
 }

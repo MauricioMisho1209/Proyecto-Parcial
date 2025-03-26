@@ -1,21 +1,84 @@
-.RegesoMenu a{
-    display: block;
-    width: 100%;
-    max-width: 300px;
+/* Importar fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Entrada de comentarios */
+.input input {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Contenedor de comentarios */
+.contenedor {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Estilo de cada comentario */
+.comentario {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 8px;
+    max-width: 600px;
+    text-align: left;
+    position: relative;
+}
+
+/* Estilo para respuestas anidadas */
+.subcomentarios {
+    margin-left: 20px;
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    padding-left: 10px;
+}
+
+/* Botones */
+button {
+    background: #ff7b00;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff9b33;
+}
+
+/* Botón de regreso al menú */
+.RegresoMenu a {
+    display: inline-block;
     text-decoration: none;
     background: #ff7b00;
     color: white;
-    padding: 12px 20px;
+    padding: 10px 20px;
     border-radius: 8px;
-    text-align: center;
-    font-weight: 600;
-    transition: 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
-/* Efecto hover */
-.RegesoMenu a:hover {
+.RegresoMenu a:hover {
     background: #ff9b33;
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }

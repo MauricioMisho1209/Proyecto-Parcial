@@ -1,61 +1,107 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="input">
-        <input type="text" onkeypress="crearComentarios(event)">
+        <input type="text" id="comentarioInput" onkeypress="crearComentarios(event)" placeholder="Escribe un comentario y presiona Enter">
     </div>
     <div class="contenedor"></div>
 
-    <script>
-        let arreglo = []; //Se crea un arreglo vasio
+    <div class="RegresoMenu">
+        <a href="../index.html">Regresar al menú</a>
+    </div>
 
-        function crearComentarios(event) {
-            if (event.key === "Enter" && event.target.value !== "") {
-                const nuevocomentario = {
-                    texto: event.target.value, //se agrega lo que el usuario escribio
-                    likes: 0 //se inicia con cero likes 
+    <script>
+        let arreglo = []; // Arreglo para almacenar comentarios
+
+        function crearComentarios(event, parentIndex = null) {
+            if (event.key === "Enter" && event.target.value.trim() !== "") {
+                const nuevoComentario = {
+                    texto: event.target.value,
+                    likes: 0,
+                    respuestas: [] // Array para almacenar respuestas
                 };
 
-                arreglo.push(nuevocomentario); //se agrega al arreglo
-                event.target.value = ""; //se limpia el campo de entrada 
-                actualizarComentarios(); //se actualiza la pantalla
+                if (parentIndex === null) {
+                    arreglo.push(nuevoComentario);
+                } else {
+                    arreglo[parentIndex].respuestas.push(nuevoComentario);
+                }
+
+                event.target.value = "";
+                actualizarComentarios();
             }
         }
 
         function actualizarComentarios() {
-            let contenedor = document.querySelector(".contenedor"); //busca el contenedor y lo actuaiza 
-            contenedor.innerHTML = "";  // limpia el contenedor para poder actualizarlo 
+            let contenedor = document.querySelector(".contenedor");
+            contenedor.innerHTML = "";
 
-            arreglo.forEach((comentario, index) => {  //agarra el arreglo y  muestra todos los comentarios 
-                let caja = document.createElement("div");
-                caja.textContent = comentario.texto + " ";//se crea una caja nueva para el nuevo comentario
-
-                let botonLike = document.createElement("button"); 
-                botonLike.textContent = `LIKE: ${comentario.likes}`;// se crea el coton de like si ningun like
-                botonLike.onclick = () => { //se acciona el boton de like con el clik
-                    comentario.likes++;
-                    actualizarComentarios();
-                };
-
-                let botonEliminar = document.createElement("button");//
-                botonEliminar.textContent = "Eliminar";
-                botonEliminar.onclick = () => {
-                    arreglo.splice(index, 1);
-                    actualizarComentarios();
-                };
-
-                caja.appendChild(botonLike);
-                caja.appendChild(botonEliminar);
+            arreglo.forEach((comentario, index) => {
+                let caja = crearCajaComentario(comentario, index);
                 contenedor.appendChild(caja);
             });
         }
+
+        function crearCajaComentario(comentario, index, esRespuesta = false) {
+            let caja = document.createElement("div");
+            caja.classList.add("comentario");
+            if (esRespuesta) caja.classList.add("respuesta");
+
+            let texto = document.createElement("p");
+            texto.textContent = comentario.texto;
+
+            let botonLike = document.createElement("button");
+            botonLike.textContent = `👍 ${comentario.likes}`;
+            botonLike.onclick = () => {
+                comentario.likes++;
+                actualizarComentarios();
+            };
+
+            let botonEliminar = document.createElement("button");
+            botonEliminar.textContent = "🗑 Eliminar";
+            botonEliminar.onclick = () => {
+                if (!esRespuesta) {
+                    arreglo.splice(index, 1);
+                } else {
+                    arreglo[index].respuestas.splice(index, 1);
+                }
+                actualizarComentarios();
+            };
+
+            let botonResponder = document.createElement("button");
+            botonResponder.textContent = "💬 Responder";
+            botonResponder.onclick = () => {
+                let inputRespuesta = document.createElement("input");
+                inputRespuesta.type = "text";
+                inputRespuesta.placeholder = "Escribe una respuesta y presiona Enter";
+                inputRespuesta.onkeypress = (event) => crearComentarios(event, index);
+                caja.appendChild(inputRespuesta);
+                inputRespuesta.focus();
+            };
+
+            caja.appendChild(texto);
+            caja.appendChild(botonLike);
+            caja.appendChild(botonEliminar);
+            caja.appendChild(botonResponder);
+
+            if (comentario.respuestas.length > 0) {
+                let subContenedor = document.createElement("div");
+                subContenedor.classList.add("subcomentarios");
+                comentario.respuestas.forEach((respuesta, i) => {
+                    let respuestaCaja = crearCajaComentario(respuesta, i, true);
+                    subContenedor.appendChild(respuestaCaja);
+                });
+                caja.appendChild(subContenedor);
+            }
+
+            return caja;
+        }
     </script>
-
-<div class="RegesoMenu">
-    <a href="../index.html">Regresar al menu</a>
-</div>
-
 </body>
 </html>

@@ -25,12 +25,6 @@ div {
     max-width: 800px;
 }
 
-/* Párrafo */
-p {
-    text-align: justify;
-    line-height: 1.6;
-}
-
 /* Estilo para el select y los inputs */
 select, input[type="text"], input[type="submit"] {
     width: 100%;
@@ -40,12 +34,6 @@ select, input[type="text"], input[type="submit"] {
     border: none;
     border-radius: 5px;
     font-size: 16px;
-}
-
-/* Input de texto */
-input[type="text"] {
-    background: white;
-    color: black;
 }
 
 /* Botón de enviar */
