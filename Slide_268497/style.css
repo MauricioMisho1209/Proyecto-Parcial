@@ -41,3 +41,25 @@
   background: grey;
   cursor: not-allowed;
 }
+
+.RegesoMenu a{
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  text-decoration: none;
+  background: #ff7b00;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto hover */
+.RegesoMenu a:hover {
+  background: #ff9b33;
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}

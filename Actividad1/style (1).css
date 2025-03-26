@@ -1,34 +1,107 @@
+/* Importar fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 * {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background-color: #111;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 400px;
+/* Contenedores */
+div {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
 }
 
-.square {
-  background-color: #1d1d1d;
-  box-shadow: 0 0 2px #000;
-  height: 50px;
-  width: 16px;
-  margin: 2px;
-  transition: 5s ease;
+/* Párrafo */
+p {
+    text-align: justify;
+    line-height: 1.6;
 }
 
-.square:hover {
-  transition-duration: 0s;
+/* Estilo para el select y los inputs */
+select, input[type="text"], input[type="submit"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Input de texto */
+input[type="text"] {
+    background: white;
+    color: black;
+}
+
+/* Botón de enviar */
+input[type="submit"] {
+    background: #ff7b00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #ff9b33;
+    transform: scale(1.05);
+}
+
+/* Tabla de horario */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid white;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+td {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Imagen */
+img {
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Enlace de regreso */
+.RegesoMenu a {
+    display: inline-block;
+    text-decoration: none;
+    background: #ff7b00;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.RegesoMenu a:hover {
+    background: #ff9b33;
+    transform: scale(1.05);
 }
