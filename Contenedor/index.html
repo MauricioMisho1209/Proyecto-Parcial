@@ -17,14 +17,14 @@
     </div>
 
     <script>
-        let arreglo = []; // Arreglo para almacenar comentarios
+        let arreglo = []; // Arreglo comentarios
 
         function crearComentarios(event, parentIndex = null) {
             if (event.key === "Enter" && event.target.value.trim() !== "") {
                 const nuevoComentario = {
                     texto: event.target.value,
                     likes: 0,
-                    respuestas: [] // Array para almacenar respuestas
+                    respuestas: [] // Arrelo respuestas
                 };
 
                 if (parentIndex === null) {
