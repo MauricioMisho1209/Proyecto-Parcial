@@ -1,0 +1,83 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+.contenedor {
+    width: 60%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.boton-opcion {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.boton-opcion:hover {
+    background-color: #0056b3;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.boton-opcion.seleccionado {
+    background-color: #0056b3;
+    color: white;
+}
+
+#siguiente{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #ec882b;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#siguiente:hover{
+    background-color: #ff9d41;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+.RegesoMenu a {
+    display: inline-block;
+    text-decoration: none;
+    background: #ff7b00;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.RegesoMenu a:hover {
+    background: #ff9b33;
+    transform: scale(1.05);
+}
